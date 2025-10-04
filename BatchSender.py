@@ -20,16 +20,16 @@ from web3 import Web3
 from eth_account import Account
 
 # === Configuration === 
-RPC_URL = "" # RPC endpoint of the blockchain network (e.g. Infura, Alchemy, or local node)
-PRIVATE_KEY = ""  # Your private key (without 0x prefix)
-DEFAULT_AMOUNT_ETH = 1  # Default transfer amount (in ETH)
+RPC_URL = "" # ⚠️ RPC endpoint of the blockchain network (e.g. Infura, Alchemy, or local node)
+PRIVATE_KEY = ""  # ⚠️ Your private key (without 0x prefix)
+DEFAULT_AMOUNT_ETH = 0.00001  # ⚠️ Default transfer amount (in ETH)
 
 # === Derive wallet address ===
 account = Account.from_key(PRIVATE_KEY)
 SENDER_ADDRESS = account.address
 
 # === Contract info ===
-CONTRACT_ADDRESS = ""  # Replace with deployed contract address
+CONTRACT_ADDRESS = ""  # ⚠️ Replace with deployed contract address
 contract_abi = [
     {
         "inputs": [
