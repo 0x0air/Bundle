@@ -16,7 +16,7 @@ II. 📜 Contract Description (BatchSender.sol)
 
 Contract Name: BatchSender
 Core Function:
-
+```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -36,7 +36,7 @@ contract BatchSender {
         }
     }
 }
-
+```
 Accepts two arrays, recipients and amounts, where addresses and amounts correspond one-to-one.
 msg.value must be greater than or equal to the total sum of all transfer amounts.
 The contract sends ETH to each specified address in batch.
