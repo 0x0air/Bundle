@@ -3,7 +3,7 @@ from solcx import compile_source, install_solc
 import logging
 
 # ========== Basic Configuration ==========
-RPC_URL = "" #
+RPC_URL = "" # ⚠️ RPC endpoint of the blockchain network (e.g. Infura, Alchemy, or local node)
 PRIVATE_KEY = ""  # ⚠️ Your private key
 SOLC_VERSION = "0.8.20"
 
