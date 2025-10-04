@@ -1,6 +1,6 @@
 # 📦 Batch Gas_Token Transfer Contract and Script Usage Guide
 
-## **I. 🧾 Function Overview**
+**## I. 🧾 Function Overview**
 
 This tool consists of a Solidity smart contract and a Python script.
 When used together, it enables batch ETH transfers to multiple addresses.
@@ -16,7 +16,7 @@ It supports assigning custom amounts to certain addresses, while others use a de
 
 ✅ One-click batch transaction execution
 
-## II. 📜 Contract Description **(BatchSender.sol)**
+## II. 📜 Contract Description (BatchSender.sol)
 
 Contract Name: BatchSender
 Core Function:
