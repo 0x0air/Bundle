@@ -108,12 +108,10 @@ Supports two formats, configured line by line:
 
 
 Example:
-
+```
 0x1A98B82b7b14a9C3987d87555C7a8F4D224293xxx---0.001
-
 0x910A555fCFb03C92573C857b14EBbB40e773axxx---0.0001
-
 0xff5c91ec5b6e66b1a63f490200dbaa362562axxx
-
+```
 
 Finally, simply run the script to start the batch transfer.
