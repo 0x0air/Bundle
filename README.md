@@ -45,15 +45,12 @@ Accepts two arrays, recipients and amounts, where addresses and amounts correspo
 msg.value must be greater than or equal to the total sum of all transfer amounts.
 The contract sends ETH to each specified address in batch.
 
-## III. 📂 File Description
+## III. 📌 Script execution order
 
-receiver_addresses.txt: Configuration file for recipient addresses and amounts
-
-BatchSender.py: Main execution script
-
-BatchSender.sol: Smart contract source code (already deployed)
-
-Python script dependencies: web3, eth_account
+### 1. Deploy contracts
+• Run Deploy_contracts.py to deploy BatchSender_contract.sol.
+• Alternatively, you can deploy the contract using Remix IDE, but make sure to deploy it on the same blockchain network where you want to use BatchSender.
+• After deployment, copy the contract address returned by the script.
 
 ## IV. 📄 receiver_addresses.txt Format
 
