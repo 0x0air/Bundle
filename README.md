@@ -7,9 +7,13 @@ When used together, it enables batch ETH transfers to multiple addresses.
 It supports assigning custom amounts to certain addresses, while others use a default amount.
 
 ✅ Automatically recognizes custom and default amounts
+
 ✅ Dynamically fetches gasPrice and gasLimit
+
 ✅ Uses receiver_addresses.txt to configure transfer targets
+
 ✅ Automatically calculates the total transfer amount (msg.value)
+
 ✅ One-click batch transaction execution
 
 ## II. 📜 Contract Description (BatchSender.sol)
