@@ -47,7 +47,7 @@ The contract sends ETH to each specified address in batch.
 
 ## III. 📌 Script execution order
 
-### 1. Deploy contracts
+#### 1. Deploy contracts
 • Run Deploy_contracts.py to deploy BatchSender_contract.sol.
 
 • Alternatively, you can deploy the contract using Remix IDE, but make sure to deploy it on the same blockchain network where you want to use BatchSender.
