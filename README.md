@@ -54,7 +54,7 @@ The contract sends ETH to each specified address in batch.
 
 • After deployment, copy the contract address returned by the script.
 
-### 2. Configure BatchSender.py
+#### 2. Configure BatchSender.py
 • Open BatchSender.py and fill in the following:
 
 • RPC_URL → Your RPC endpoint
@@ -65,7 +65,7 @@ The contract sends ETH to each specified address in batch.
 
 DEFAULT_AMOUNT_ETH → Default ETH amount to send (if not specified per address)
 
-### 3. Prepare Recipient Addresses
+#### 3. Prepare Recipient Addresses
 
 • Edit receiver_addresses.txt to list all recipient addresses and amounts.
 
@@ -75,7 +75,7 @@ DEFAULT_AMOUNT_ETH → Default ETH amount to send (if not specified per address)
 <address>              # Uses default amount set in BatchSender.py
 ```
 
-### 4. Execute Batch Sending
+#### 4. Execute Batch Sending
 
 • Run BatchSender.py.
 
