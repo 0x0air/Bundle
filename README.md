@@ -29,11 +29,13 @@ It supports assigning custom amounts to certain addresses, while others use a de
 #### 2. Configure BatchSender.py
 • Open BatchSender.py and fill in the following:
 
+```
 • RPC_URL → Your RPC endpoint
 
 • PRIVATE_KEY → Your private key
 
 • CONTRACT_ADDRESS → Paste the deployed contract address
+```
 
 DEFAULT_AMOUNT_ETH → Default ETH amount to send (if not specified per address)
 
