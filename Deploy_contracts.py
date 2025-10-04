@@ -3,8 +3,8 @@ from solcx import compile_source, install_solc
 import logging
 
 # ========== Basic Configuration ==========
-RPC_URL = ""
-PRIVATE_KEY = ""  # ⚠️ Your private key (must start with 0x)
+RPC_URL = "" #
+PRIVATE_KEY = ""  # ⚠️ Your private key
 SOLC_VERSION = "0.8.20"
 
 # ========== Logging Configuration ==========
