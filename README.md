@@ -1,6 +1,6 @@
 # 📦 Batch Gas_Token Transfer Contract and Script Usage Guide
 
-I. 🧾 Function Overview
+## I. 🧾 Function Overview
 
 This tool consists of a Solidity smart contract and a Python script.
 When used together, it enables batch ETH transfers to multiple addresses.
@@ -12,7 +12,7 @@ It supports assigning custom amounts to certain addresses, while others use a de
 ✅ Automatically calculates the total transfer amount (msg.value)
 ✅ One-click batch transaction execution
 
-II. 📜 Contract Description (BatchSender.sol)
+## II. 📜 Contract Description (BatchSender.sol)
 
 Contract Name: BatchSender
 Core Function:
@@ -41,7 +41,7 @@ Accepts two arrays, recipients and amounts, where addresses and amounts correspo
 msg.value must be greater than or equal to the total sum of all transfer amounts.
 The contract sends ETH to each specified address in batch.
 
-III. 📂 File Description
+## III. 📂 File Description
 
 receiver_addresses.txt: Configuration file for recipient addresses and amounts
 
@@ -51,7 +51,7 @@ BatchSender.sol: Smart contract source code (already deployed)
 
 Python script dependencies: web3, eth_account
 
-IV. 📄 receiver_addresses.txt Format
+## IV. 📄 receiver_addresses.txt Format
 
 Supports two formats, configured line by line:
 
