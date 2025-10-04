@@ -101,9 +101,11 @@ The contract sends ETH to each specified address in batch.
 
 Supports two formats, configured line by line:
 
+`
 <address>---<amount>     # Specify a custom amount (in ETH)
     
 <address>                # Use the default amount (defined in the script)
+`
 
 
 Example:
