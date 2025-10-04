@@ -16,36 +16,8 @@ It supports assigning custom amounts to certain addresses, while others use a de
 
 ✅ One-click batch transaction execution
 
-## II. 📜 Contract Description (BatchSender.sol)
 
-Contract Name: BatchSender
-Core Function:
-```
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-
-contract BatchSender {
-    function distribute(address[] calldata recipients, uint256[] calldata amounts) external payable {
-        require(recipients.length == amounts.length, "Mismatched arrays");
-
-        uint256 total = 0;
-        for (uint256 i = 0; i < amounts.length; i++) {
-            total += amounts[i];
-        }
-
-        require(msg.value >= total, "Insufficient ETH sent");
-
-        for (uint256 i = 0; i < recipients.length; i++) {
-            payable(recipients[i]).transfer(amounts[i]);
-        }
-    }
-}
-```
-Accepts two arrays, recipients and amounts, where addresses and amounts correspond one-to-one.
-msg.value must be greater than or equal to the total sum of all transfer amounts.
-The contract sends ETH to each specified address in batch.
-
-## III. 📌 Script execution order
+## II. 📌 Script execution order
 
 #### 1. Deploy contracts
 • Run Deploy_contracts.py to deploy BatchSender_contract.sol.
@@ -80,6 +52,49 @@ DEFAULT_AMOUNT_ETH → Default ETH amount to send (if not specified per address)
 • Run BatchSender.py.
 
 • The script will read the addresses and amounts from receiver_addresses.txt and send ETH in a single batch transaction.
+
+
+## II. 📜 Contract Description (BatchSender.sol)
+
+Contract Name: BatchSender
+Core Function:
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+/// @title BatchSender
+/// @notice A simple contract to send ETH to multiple recipients in a single transaction
+/// @dev Uses `transfer()` for safety against reentrancy
+contract BatchSender {
+
+    /// @notice Sends ETH to multiple recipients
+    /// @param recipients Array of addresses to receive ETH
+    /// @param amounts Array of amounts (in wei) corresponding to each recipient
+    /// @dev The lengths of recipients and amounts must match. msg.value must cover total sum.
+    function distribute(address[] calldata recipients, uint256[] calldata amounts) external payable {
+        // Ensure recipients and amounts arrays have the same length
+        require(recipients.length == amounts.length, "Mismatched arrays");
+
+        // Calculate total ETH required for all transfers
+        uint256 total = 0;
+        for (uint256 i = 0; i < amounts.length; i++) {
+            total += amounts[i];
+        }
+
+        // Ensure the sender sent enough ETH to cover all transfers
+        require(msg.value >= total, "Insufficient ETH sent");
+
+        // Send ETH to each recipient
+        for (uint256 i = 0; i < recipients.length; i++) {
+            // `transfer` forwards 2300 gas and reverts on failure
+            payable(recipients[i]).transfer(amounts[i]);
+        }
+    }
+}
+```
+Accepts two arrays, recipients and amounts, where addresses and amounts correspond one-to-one.
+msg.value must be greater than or equal to the total sum of all transfer amounts.
+The contract sends ETH to each specified address in batch.
 
 
 ## IV. 📄 receiver_addresses.txt Format
