@@ -1,6 +1,6 @@
 # 📦 Batch Gas_Token Transfer Contract and Script Usage Guide
 
-**## I. 🧾 Function Overview**
+## I. 🧾 Function Overview
 
 This tool consists of a Solidity smart contract and a Python script.
 When used together, it enables batch ETH transfers to multiple addresses.
@@ -49,8 +49,38 @@ The contract sends ETH to each specified address in batch.
 
 ### 1. Deploy contracts
 • Run Deploy_contracts.py to deploy BatchSender_contract.sol.
+
 • Alternatively, you can deploy the contract using Remix IDE, but make sure to deploy it on the same blockchain network where you want to use BatchSender.
+
 • After deployment, copy the contract address returned by the script.
+
+### 2. Configure BatchSender.py
+• Open BatchSender.py and fill in the following:
+
+• RPC_URL → Your RPC endpoint
+
+• PRIVATE_KEY → Your private key
+
+• CONTRACT_ADDRESS → Paste the deployed contract address
+
+DEFAULT_AMOUNT_ETH → Default ETH amount to send (if not specified per address)
+
+### 3. Prepare Recipient Addresses
+
+• Edit receiver_addresses.txt to list all recipient addresses and amounts.
+
+• Supported formats per line:
+```
+<address>---<amount>   # Custom ETH amount
+<address>              # Uses default amount set in BatchSender.py
+```
+
+### 4. Execute Batch Sending
+
+• Run BatchSender.py.
+
+• The script will read the addresses and amounts from receiver_addresses.txt and send ETH in a single batch transaction.
+
 
 ## IV. 📄 receiver_addresses.txt Format
 
