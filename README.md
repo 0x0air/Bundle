@@ -50,7 +50,7 @@ The contract sends ETH to each specified address in batch.
 #### 1. Deploy contracts
 • Run Deploy_contracts.py to deploy BatchSender_contract.sol.
 
-• Alternatively, you can deploy the contract using Remix IDE, but make sure to deploy it on the same blockchain network where you want to use BatchSender.
+• Alternatively, you can deploy the contract using [Remix IDE](https://remix.ethereum.org/), but make sure to deploy it on the same blockchain network where you want to use BatchSender.
 
 • After deployment, copy the contract address returned by the script.
 
