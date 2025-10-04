@@ -1,3 +1,6 @@
+<address>---<amount>   # Custom ETH amount
+<address>              # Uses default amount set in BatchSender.py
+
 0x1A98B82b7b14a9C3987d87555C7a8F4D224293xxx
 0x910A555fCFb03C92573C857b14EBbB40e773axxx
 0xxxxxx
