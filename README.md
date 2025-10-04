@@ -16,7 +16,7 @@ It supports assigning custom amounts to certain addresses, while others use a de
 
 ✅ One-click batch transaction execution
 
-## II. 📜 Contract Description (BatchSender.sol)
+## II. 📜 Contract Description **(BatchSender.sol)**
 
 Contract Name: BatchSender
 Core Function:
